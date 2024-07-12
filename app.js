@@ -49,6 +49,11 @@ app.get('/list-files', (req, res) => {
     });
 });
 
+// Add a route for the root URL
+app.get('/', (req, res) => {
+    res.send('Welcome to the Node.js File System API');
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
